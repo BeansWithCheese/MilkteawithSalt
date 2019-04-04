@@ -17,6 +17,8 @@ int main(int argc, char* argv[]){
 	int reverse;
 	int sort;
 	char s[33 + 1];
+	char prime1[] ="False";
+	char prime2[] ="True";
 	
 
 	while(fgets(input, sizeof(input), stdin) != NULL) {
@@ -57,7 +59,7 @@ int main(int argc, char* argv[]){
 				k++;
 			}
 
-			if(sort == 0 && reverse ==0);
+			if(sort == 0 && reverse == 0);
 			else{
 				printf("reverse> %d \n",reverse);
 				printf("sort> ");
@@ -66,6 +68,11 @@ int main(int argc, char* argv[]){
 						printf("0");
 				}
 				printf("%d \n",sort);
+				buttler(atoi(input),MAX_LEN);
+				if(isPrime(atoi(input)))
+					printf("isPrime > %s \n",prime2);
+				else
+					printf("isPrime > %s \n",prime1);
 			}
 
 			//printf("reverse> %d \nsort> %d \n", reverse, sort);

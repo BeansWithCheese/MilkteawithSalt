@@ -1,6 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include"21800823.h"
 #define MAX_LEN 2048
 
+void buttler(int n, long buttlernumber){
+	int arrc[buttlernumber];
+	int i=0;
+	for (i = 0; n > 0; i++)
+	{
+		arrc[i] = n % 2;
+		n = n / 2;
+	}
+	printf("binary representation> "); for (int j = i - 1; j >= 0; j--)
+	{
+		printf("%d", arrc[j]);
+	}
+	printf("\n");
+}
 int sort_digits(int n){
 	int arr[MAX_LEN];
 	int temp;
@@ -26,8 +42,9 @@ int sort_digits(int n){
 
 	for(int j = 0; j < i; j++)
 		num = (num * 10) + arr[j];
-
+ 
 	return num;
 }
 	
 				
+
